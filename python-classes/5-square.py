@@ -4,7 +4,6 @@ class that defines a square
 """
 
 
-
 class Square:
     """
     size: private instance attribute
@@ -38,4 +37,3 @@ class Square:
         else:
             for i in range(self.__size):
                 print(self.__size * '#')
-
