@@ -57,7 +57,7 @@ class Square:
         """
         Return the area of a square
         """
-        return self.__size ** 2
+        return (self.__size)**2
 
 
     def my_print(self):
@@ -67,8 +67,8 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            for i in range(self.__position[1]):
-                print()
-            for i in range(self.__size):
-                print(f'{self.__position[0] * " "}{self.__size * "#"}')
+            print("\n" * self.__position[1], end="")
+            print("\n".join([" " * self.__position[0] +
+                             "#" * self.__size
+                             for rows in range(self.__size)]))
 
