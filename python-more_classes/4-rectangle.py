@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 contains a class Rectangle
 """
