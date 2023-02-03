@@ -12,7 +12,7 @@ Traceback (most recent call last):
 TypeError: last_name must be a string
 
 >>> say_my_name("Clark")
-My name is Walter 
+My name is Clark 
 
 >>> say_my_name(13)
 Traceback (most recent call last):
