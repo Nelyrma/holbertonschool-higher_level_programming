@@ -6,7 +6,7 @@ The ``say_my_name`` module
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
->>> say_my_name("Bob")
+>>> say_my_name("Brian")
 My name is Bob
 
 >>> say_my_name(2, "White")
