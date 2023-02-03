@@ -7,7 +7,7 @@ The ``say_my_name`` module
 My name is John Smith
 
 >>> say_my_name("Brian")
-My name is Bob
+My name is Brian
 
 >>> say_my_name(2, "White")
 Traceback (most recent call last):
