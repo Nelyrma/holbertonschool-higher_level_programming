@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 contains a subclass Rectangle that inherits from BaseGeometry
