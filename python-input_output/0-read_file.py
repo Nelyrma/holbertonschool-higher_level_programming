@@ -6,4 +6,4 @@ def read_file(filename=""):
     """Reads a file and prints it to stdout"""
 
     with open(filename, "r") as fic:
-        print(fic.read())
+        print(fic.read(), end="")
