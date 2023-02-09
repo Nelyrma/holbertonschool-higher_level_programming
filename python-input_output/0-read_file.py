@@ -5,9 +5,5 @@
 def read_file(filename=""):
     """Reads a file and prints it to stdout"""
 
-    fic = open(filename, "r")
-
-    content = fic.read()
-    print content
-
-    fic.close()
+    with open(filename, "r") as fic:
+        print(fic.read())
