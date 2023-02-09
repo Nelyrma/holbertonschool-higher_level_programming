@@ -6,5 +6,5 @@ import json
 
 def save_to_json_file(my_obj, filename):
     """writes an Object to a text file using JSON repre"""
-    with open("filename.json", "w") as f:
-       obj = json.dump(my_obj, f)
+    with open(filename, "w") as f:
+      m = json.dump(my_obj, f)
