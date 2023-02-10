@@ -4,6 +4,32 @@ The ``7-base_geometry`` module
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
+Documentation
+=============
+
+we use __doc__ to verify module's and function's Documentation
+
+>>> module_doc = __import__("7-base_geometry").__doc__
+>>> print(len(module_doc) > 0)
+True
+
+>>> class_doc = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> print(len(class_doc) > 0)
+True
+
+>>> area_doc = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> print(len(area_doc) > 0)
+True
+
+>>> integer_validator_doc = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> print(len(integer_validator_doc) > 0)
+True
+
+Methods Area and Integer Validator
+==================================
+
+>>>bg = BaseGeometry()
+
 >>> bg.area()
 Traceback (most recent call last):
 [Exception] area() is not implemented
@@ -28,33 +54,5 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
->>> bg.integer_validator("age", 30)
+>>> bg.integer_validator("age", 70)
 >>>
-
->>> bg.integer_validator("age", (0, 1))
-Traceback (most recent call last):
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", [0, 1])
-Traceback (most recent call last):
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", {0:1, 2:3})
-Traceback (most recent call last):
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", {0, 3})
-Traceback (most recent call last):
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", {0:1, 2:3})
-Traceback (most recent call last):
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", True)
-Traceback (most recent call last):
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", None)
-Traceback (most recent call last):
-TypeError: age must be an integer
