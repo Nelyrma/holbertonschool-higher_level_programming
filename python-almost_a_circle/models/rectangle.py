@@ -95,3 +95,8 @@ class Rectangle(Base):
         """prints in stdout the rectangle instance with the character #"""
         rect = "\n".join(["#" * self.__width for rows in range(self.__height)])
         print(rect)
+
+    def __str__(self):
+        """overriding the __str__ method"""
+        return ([Rectangle] ({}) {}/{} - {}/{}
+                .format(id, x, y, width, height))
