@@ -17,3 +17,14 @@ class Square(Rectangle):
         """overriding the __str__ method"""
         phrase = "[Square] ({}) {}/{} - {}"
         return phrase.format(self.id, self.x, self.y, self.width)
+
+    @property
+    def size(self):
+        """retrieves the value of size"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """sets the size value of a square"""
+        self.width = value
+        self.height = value
