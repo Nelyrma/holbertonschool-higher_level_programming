@@ -101,22 +101,27 @@ class Rectangle(Base):
         return '[Rectangle] ({}) {}/{} - {}/{}' \
             .format(self.id, self.x, self.y, self.width, self.height)
 
-    def __update(self, id=None, width=None, height=None, x=None, y=None):
-        """Internal method that updates instance attributes via */**args """
-        if id is not None:
-            self.id = id
-        if width is not None:
-            self.width = width
-        if height is not None:
-            self.height = height
-        if x is not None:
-            self.x = x
-        if y is not None:
-            self.y = y
-
-    def update(self, *args):
-        """public method that assigns an argument to each attribute"""
+    def update(self, *args, **kwargs):
+        """ module documented """
         if args:
-            self.__update(*args)
-        elif kwargs:
-            self.__update(**kwargs)
+            self.id = args[0]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
