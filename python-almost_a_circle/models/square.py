@@ -10,21 +10,11 @@ class Square(Rectangle):
     class Square
     """
     def __init__(self, size, x=0, y=0, id=None):
-        """
-        class constructor
-
-        Args:
-            size
-            x
-            y
-            id
-        """
-        super().__init__(id, x, y, width, height)
-        self.size = size
-        width = height = size
+        """class constructor"""
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """overriding the __str__ method"""
         phrase = "[Square] ({}) {}/{} - {}"
-        return phrase.format(self.id, self.x, self.y, self.size)
+        return phrase.format(self.id, self.x, self.y, self.width)
 
