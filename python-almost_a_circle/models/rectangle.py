@@ -101,10 +101,20 @@ class Rectangle(Base):
         return '[Rectangle] ({}) {}/{} - {}/{}' \
             .format(self.id, self.x, self.y, self.width, self.height)
 
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        """Internal method that updates instance attributes via */**args """
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
     def update(self, *args):
         """public method that assigns an argument to each attribute"""
-        args = ['id', 'width', 'height', 'x', 'y']
-        arg = 0
-        for arg in args:
-            arg += arg
-            return arg
+        if args:
+            self.__update(*args)
