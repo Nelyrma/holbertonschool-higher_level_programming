@@ -118,3 +118,5 @@ class Rectangle(Base):
         """public method that assigns an argument to each attribute"""
         if args:
             self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
