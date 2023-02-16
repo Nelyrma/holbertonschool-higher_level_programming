@@ -40,4 +40,4 @@ class Base:
         if json_string is None:
             return []
         else:
-            return json.loads(json.string)
+            return json.loads(json_string)
