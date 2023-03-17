@@ -13,4 +13,3 @@ if __name__ == '__main__':
     [print(", ".join([c[2] for c in cur.fetchall() if c[4] == sys.argv[4]]))]
     cur.close()
     db.close()
-
