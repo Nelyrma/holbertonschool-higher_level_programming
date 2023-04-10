@@ -9,6 +9,6 @@ if (arg === 1) {
   console.log('Missing number of occurences');
 } else {
   for (let i = 0; i < arg; i++) {
-      console.log(sentence);
+    console.log(sentence);
   }
-} 
+}
