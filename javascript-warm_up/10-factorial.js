@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function factorial(n) {
+function factorial (n) {
   if (!n) {
     return 1;
   } else if (n === 0) {
