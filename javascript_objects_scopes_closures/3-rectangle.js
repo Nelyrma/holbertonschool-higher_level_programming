@@ -7,6 +7,7 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     for (let j = 0; j < this.height; j++) {
       let line = '';
