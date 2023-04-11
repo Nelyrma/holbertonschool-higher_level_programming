@@ -7,7 +7,7 @@ class Rectangle {
       this.height = h;
     }
   }
-  
+
   print () {
     for (let j = 0; j < this.height; j++) {
       let line = '';
@@ -19,9 +19,9 @@ class Rectangle {
   }
 
   rotate () {
-    let temp = this.width;
+    const temp = this.width;
     this.width = this.height;
-    this.height = temp;   
+    this.height = temp;
   }
 
   double () {
