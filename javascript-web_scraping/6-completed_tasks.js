@@ -6,7 +6,7 @@ const apiUrl = process.argv[2];
 request(apiUrl, (error, response, body) => {
   if (error) {
     console.log(error);
-      return;
+    return;
   }
 
   const todos = JSON.parse(body);
